@@ -1,4 +1,11 @@
 ArtTrend::Application.routes.draw do
+  devise_for :admins
+
+  devise_scope :admin do 
+    match "admin" => "devise/sessions#new", :as => "admin_sign_in"
+    match "sign_out" => "devise/sessions#destroy", :as => "destroy_session_admin"
+  end
+  
   root :to => "products#index"
   resources :products
   # The priority is based upon order of creation:

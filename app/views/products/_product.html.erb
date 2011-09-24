@@ -1,16 +1,23 @@
 <% i=1 %> 
 <div class="group_gallery" style=" height: 280px;">
 <div style="vertical-align: bottom;position:relative; height: 235px; ">
-		<%= link_to (image_tag(product.avatar.url(:thumb), :class => "round")), product %>
+  <% if admin_signed_in? %>
+  <%= image_tag("ramka.png", :style => "position: absolute;") %>
+    <%= link_to (image_tag(product.avatar.url(:thumb), :style => "width: 226px; height: 197px; position: relative; top: 15px; left: 15px;")), product %>
+  <% else %>
+  <%= image_tag("ramka.png", :style => "position: absolute;") %>
+  <%= image_tag(product.avatar.url(:thumb), :style => "width: 226px; height: 197px; position: relative; top: 15px; left: 15px;") %>
+  <% end %>
 </div>
   <div style=" height: 45px; width: 250px; margin-left: 5px;"> 
     <p><%= product.title %></p>
-      <%# if admin_signed_in? %>
-        <%#= link_to 'Удалить', product, 
-          :confirm => 'Are you sure?',
-          :method => :delete %>
-      <%# end %>
     <p>Создание сайта</p>
+      <% if admin_signed_in? %>
+        <%= link_to 'Удалить', product, 
+          :confirm => 'Вы уверены?',
+          :method => :delete %>
+      <% end %>
+    
     </div>
 <% if i> 3 %>
    <div style="clear: left; padding-bottom: 35px;"></div>

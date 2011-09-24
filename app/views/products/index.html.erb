@@ -1,4 +1,9 @@
-        <%= render :partial => "page_products" %>
-        <%= render @products %>
-      </div>
-    </div>
+<%= render :partial => "page_products" %>
+<% if admin_signed_in? %>
+  <%= link_to 'Новый продукт', new_product_path, :style => "color: #663366; font-family: 'Myriad Pro',Verdana,Geneva,sans-serif; font-size: 14px; text-decoration: underline;" %>
+  <div style="clear: left; padding-bottom: 35px;"></div>
+<% end %>    
+<%= render @products %>
+
+</div>
+</div>

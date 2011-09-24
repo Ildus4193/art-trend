@@ -29,22 +29,11 @@
     <!-- END_HIGHLIGHT --> 
   </div>
   <div class="field">
-    <%= image_tag(@product.avatar.url(:thumb), :class => "round")  if @product.avatar_file_name.present?  %>
+    <%= image_tag(@product.avatar.url(:thumb), :class => "round")  if @product.avatar_file_name.present?  %><br /> 
     <%= f.label :avatar, "Изображение" %><br />  
     <%= f.file_field :avatar %>
   </div> 
-  <div class="field">
-    <%#= f.label "Категория" %><br />
-    <%# for category in Category.all %>
-    <%#= check_box_tag 'product[category_id][]', category.id, @product.category_id.include?(category.id), :id => dom_id(category) %>
-    <%#= label_tag dom_id(category), category.name, :class => "check_box_label" %>
-    <%# end %>
-  </div>
-  
-  
-  
 
-  
   <div class="actions"> 
     <%= f.submit "Создать" %>
   </div> 

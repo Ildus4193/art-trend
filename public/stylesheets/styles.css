@@ -23,7 +23,7 @@ h1 {
 	color: #333333;
 }
 h2 {
-	color: #3333FF;
+	color: #333333;
 	font: 16pt 'GOST type A',Verdana,Geneva,sans-serif;
 	}
 img {
@@ -489,7 +489,7 @@ li#contacts a:hover, li#contacts a:active{
 	position: relative;	
 	margin: 0 auto;
 	top: 10px;
-	width: 810px;
+	width: 820px;
 	height: 100%;
 
 	
@@ -603,7 +603,11 @@ li#contacts a:hover, li#contacts a:active{
 	margin-left: -10px;
 	vertical-align: top;
 }
-
+#show_products p {
+    font-family: "Myriad Pro", Verdana, Geneva, sans-serif;
+    font-size:18px;
+    color: #333333;
+}
 #footer {
     height: 70px;
     margin: 2px auto 0;
@@ -631,8 +635,8 @@ margin-bottom: 10px;
 
 .group_gallery {
     float: left;
-	margin-top: 10px;
-	margin-right: 120px;
+	margin-bottom: 35px;
+	margin-right: 32px;
     position: relative;
     width: 240px;
 	height: 180px;
