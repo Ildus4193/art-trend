@@ -1,10 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-@charset "utf-8";
-/* CSS Document */
-
-
 * {
 	margin: 0;
 	padding: 0;
@@ -21,14 +17,14 @@ p {
 	color: #333333;
 }
 h1 {
-	font-family: "Myriad Pro", Verdana, Geneva, sans-serif;
+	font-family: "GOST type A", Verdana, Geneva, sans-serif;
 	padding-bottom: 5px;
 	font-size: 23px;
 	color: #333333;
 }
 h2 {
 	color: #3333FF;
-	font: 16pt 'Myriad Pro',Verdana,Geneva,sans-serif;
+	font: 16pt 'GOST type A',Verdana,Geneva,sans-serif;
 	}
 img {
 	border: 0px;
@@ -310,7 +306,7 @@ li#contacts a:hover, li#contacts a:active{
   	padding: 15px 20px 10px 20px;
 }
 #phone p{
-	font: 18px "Myriad Pro", Verdana, Geneva, sans-serif;
+	font: 18px "GOST type A", Verdana, Geneva, sans-serif;
 
 }
 #left-col {
@@ -410,7 +406,7 @@ li#contacts a:hover, li#contacts a:active{
   margin-top: 15px;
   margin-left: 14px;
   font-size: 14px;
-  font-family:  "Myriad Pro", Verdana, Geneva, sans-serif;
+  font-family:  "GOST type A", Verdana, Geneva, sans-serif;
 }
 
 #sidebar ul li {	
@@ -423,7 +419,7 @@ li#contacts a:hover, li#contacts a:active{
 #sidebar ul li a {
   color: #663366;
   font-size: 14px;
-  font-family:  "Myriad Pro", Verdana, Geneva, sans-serif;
+  font-family:  "GOST type A", Verdana, Geneva, sans-serif;
 }
 
 #sidebar ul li a:hover {
@@ -457,7 +453,7 @@ li#contacts a:hover, li#contacts a:active{
   margin: 0 ;
   padding: 0;
   font-size: 14px;
-  font-family:  "Myriad Pro", Verdana, Geneva, sans-serif;
+  font-family:  "GOST type A", Verdana, Geneva, sans-serif;
 }
 
 #sidebar_content_left ul li {	
@@ -477,7 +473,7 @@ li#contacts a:hover, li#contacts a:active{
 #sidebar_content_left ul li a {
   color: #cead27;
   font-size: 14px;
-  font-family:  "Myriad Pro", Verdana, Geneva, sans-serif;
+  font-family:  "GOST type A", Verdana, Geneva, sans-serif;
 }
 
 #sidebar_content_left ul li a:hover {
@@ -558,7 +554,7 @@ li#contacts a:hover, li#contacts a:active{
 		background:url(/images/select.png);
 		color:#666666;
 		font-size:14px;
-		font-family: "Myriad Pro", Verdana, Geneva, sans-serif; 
+		font-family: "GOST type A", Verdana, Geneva, sans-serif; 
 		line-height:27px;
 		zoom:1;
 		position:relative;
@@ -580,7 +576,7 @@ li#contacts a:hover, li#contacts a:active{
 		opacity:0.85;
 		filter:alpha(opacity=85);
 		font-size:14px;
-		font-family: "Myriad Pro", Verdana, Geneva, sans-serif; 
+		font-family: "GOST type A", Verdana, Geneva, sans-serif; 
 		padding:0 6px;
 		line-height:normal;
 		outline:none;
@@ -642,10 +638,14 @@ margin-bottom: 10px;
 	height: 180px;
 }
 .group_gallery img {
-    width: 240px;
-	height: 180px;
-	border: 3px solid #d0d0d0;
+    width: 259px;
+    height: 230px;
 
+}
+.group_gallery p {
+    font-family: "Myriad Pro", Verdana, Geneva, sans-serif;
+    font-size:18px;
+    color: #333333;
 }
 
 #news {
@@ -665,7 +665,7 @@ margin-bottom: 10px;
 	margin-right: 25px;
 }
 #news_blocks p {
-	font: 14px  "Myriad Pro", Verdana, Geneva, sans-serif;
+	font: 14px  "GOST type A", Verdana, Geneva, sans-serif;
 	color: #333333;
 }
 #info_b {
@@ -705,7 +705,7 @@ margin-bottom: 10px;
 	margin-left: 25px;
 }
 #rassilka label {
-	font: 12px  "Myriad Pro", Verdana, Geneva, sans-serif;
+	font: 12px  "GOST type A", Verdana, Geneva, sans-serif;
 	color: #663366;
 }
 #user_rassilka {
@@ -735,7 +735,7 @@ margin-bottom: 10px;
 	margin-left: 25px;
 }
 #rassilka_capch label {
-	font: 12px  "Myriad Pro", Verdana, Geneva, sans-serif;
+	font: 12px  "GOST type A", Verdana, Geneva, sans-serif;
 	color: #663366;
 }
 
@@ -764,7 +764,7 @@ margin-bottom: 10px;
 #sidebar_bottom {
 }
 #sidebar_bottom a {
-	font: 14px  "Myriad Pro", Verdana, Geneva, sans-serif;
+	font: 14px  "GOST type A", Verdana, Geneva, sans-serif;
 	color: #663366;
 	text-align: center;
 	margin: 0 auto;

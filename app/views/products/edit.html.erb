@@ -1,0 +1,9 @@
+<% title "Редактирование" %>
+<%= render :partial => "page_products" %>
+<h2><%= yield(:title) %></h2>
+<%= render 'form' %>
+
+<%= link_to 'Показать', @product %> |
+<%= link_to 'Назад', products_path %>
+</div>
+</div>

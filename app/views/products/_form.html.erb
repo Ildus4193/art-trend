@@ -1,0 +1,51 @@
+<%= form_for(@product, :html => { :multipart => true }) do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation"> 
+      <h2><%= pluralize(@product.errors.count, "error") %>
+      prohibited this product from being saved:</h2> 
+ 
+      <ul> 
+      <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li> 
+      <% end %>
+      </ul> 
+    </div> 
+  <% end %>
+ 
+  <div class="field"> 
+    <%= f.label :title, "Название" %><br /> 
+    <%= f.text_field :title %>
+  </div> 
+  <div class="field"> 
+    <%= f.label :short_description, "Описание" %><br /> 
+<!-- START_HIGHLIGHT --> 
+    <%= f.text_area :short_description, :rows => 6 %>
+<!-- END_HIGHLIGHT --> 
+  </div>
+  <div class="field"> 
+    <%= f.label :description, "Полное описание" %><br /> 
+    <!-- START_HIGHLIGHT --> 
+    <%= f.text_area :description, :rows => 6 %>
+    <!-- END_HIGHLIGHT --> 
+  </div>
+  <div class="field">
+    <%= image_tag(@product.avatar.url(:thumb), :class => "round")  if @product.avatar_file_name.present?  %>
+    <%= f.label :avatar, "Изображение" %><br />  
+    <%= f.file_field :avatar %>
+  </div> 
+  <div class="field">
+    <%#= f.label "Категория" %><br />
+    <%# for category in Category.all %>
+    <%#= check_box_tag 'product[category_id][]', category.id, @product.category_id.include?(category.id), :id => dom_id(category) %>
+    <%#= label_tag dom_id(category), category.name, :class => "check_box_label" %>
+    <%# end %>
+  </div>
+  
+  
+  
+
+  
+  <div class="actions"> 
+    <%= f.submit "Создать" %>
+  </div> 
+<% end %>

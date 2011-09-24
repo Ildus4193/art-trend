@@ -1,0 +1,15 @@
+<%= render :partial => "page_products" %>
+<div id="show_products">
+
+  <%= image_tag(@product.avatar.url(:thumb), :alt => @product.title, :class => "round") %>
+  <div style="float: right; position: relative; right: 60px; top: 50px; width: 310px;">
+    <h2><%= @product.title %></h2>
+  </div>
+</div>
+  </div>
+</div>
+<%# if admin_signed_in? %>
+<%#= link_to 'Редактировать', edit_product_path(@product) %> 
+<%#= link_to 'Назад', products_path %>
+  
+<%# end %>
