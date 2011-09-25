@@ -6,7 +6,7 @@
     <%= link_to image_tag("ramka.png", :style => "position: relative;"), portfolio_path(:current_product => product) %>
   <% else %>
   <%= link_to image_tag(product.avatar.url(:thumb), :class => "products_click", :style => "width: 233px; height: 207px; position: absolute; top: 12px; left: 14px;"), product %>
-  <%= link_to image_tag("ramka.png", :style => "position: relative;"), portfolio_path %>
+  <%= link_to image_tag("ramka.png", :style => "position: relative;"), portfolio_path(:current_product => product)%>
   
   <% end %>
 </div>
