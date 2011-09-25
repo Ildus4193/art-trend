@@ -6,6 +6,7 @@ ArtTrend::Application.routes.draw do
     match "sign_out" => "devise/sessions#destroy", :as => "destroy_session_admin"
   end
   
+  match "portfolio" => "pages#portfolio", :as => 'portfolio'
   root :to => "products#index"
   resources :products
   # The priority is based upon order of creation:

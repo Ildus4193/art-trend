@@ -1,0 +1,79 @@
+<!-- Slideshow HTML -->
+<% result =Array.new %>
+<div id="title">
+     <h1></h1>
+     <p style ="font-size: 20px; color: #999; width: 200px;"></p>
+</div>
+<div id="slideshow">
+  <p style=" position: absolute; top:0; right: 135px; font: 19px 'GOST type A',Verdana,Geneva,sans-serif;  text-transform: uppercase; padding-bottom: 10px; color: #6633FF;"><%= image_tag "pic_view.png", :style => "position: relative; top: 7px; left: 0px;" %>НАЗАД К ПОРТФОЛИО</p>
+  <div id="slidesContainer">
+    <% @products.each do |product| %>
+    <%  result.push(:title => product.title, :description => product.description) %>
+    <div class="slide">
+      <div style=" position:absolute;"><%=  image_tag(product.avatar.url(:medium), :alt => product.title, :style => "width: 949px; height: 830px;  top: 50px; left: 7px; position: relative;") %></div>
+      <div style=" position:relative;overflow: hidden;"><%= image_tag("art-trend.png", :style => " position:relative;") %></div>
+    </div>
+    <% end %>
+  </div>
+</div>
+<!-- Slideshow HTML -->
+<script type="text/javascript">
+$(document).ready(function() {
+  var currentPosition = <%= params[:current_product] %> - 1 ;
+  var slideWidth = 964;
+  var slides = $('.slide');
+  var numberOfSlides = slides.length;
+  var productParams = <%= raw result.to_json  %>;
+  $('#title h1').text(productParams[currentPosition].title);
+  $('#title p').text(productParams[currentPosition].description);
+  // Remove scrollbar in JS
+  $('#slidesContainer').css('overflow', 'hidden');
+
+  // Wrap all .slides with #slideInner div
+  slides
+  .wrapAll('<div id="slideInner"></div>')
+  // Float left to display horizontally, readjust .slides width
+  .css({
+    'float' : 'left',
+    'width' : slideWidth
+  });
+
+  // Set #slideInner width equal to total width of all slides
+  $('#slideInner').css('width', slideWidth * numberOfSlides);
+
+  // Insert left and right arrow controls in the DOM
+  $('#slideshow')
+    .prepend('<span class="control" id="leftControl">Move left</span>')
+    .append('<span class="control" id="rightControl">Move right</span>');
+
+  // Hide left arrow control on first load
+  manageControls(currentPosition);
+
+  // Create event listeners for .controls clicks
+  $('.control')
+    .bind('click', function(){
+    // Determine new position
+      currentPosition = ($(this).attr('id')=='rightControl')
+    ? currentPosition+1 : currentPosition-1;
+
+      $('#title h1').text(productParams[currentPosition].title);
+      $('#title p').text(productParams[currentPosition].description);
+      // Hide / show controls
+      manageControls(currentPosition);
+      // Move slideInner using margin-left
+      $('#slideInner').animate({
+        'marginLeft' : slideWidth*(-currentPosition)
+      });
+    });
+
+  // manageControls: Hides and shows controls depending on currentPosition
+  function manageControls(position){
+    // Hide left arrow if position is first slide
+    if(position==0){ $('#leftControl').hide() }
+    else{ $('#leftControl').show() }
+    // Hide right arrow if position is last slide
+    if(position==numberOfSlides-1){ $('#rightControl').hide() }
+    else{ $('#rightControl').show() }
+    }
+  });
+</script>

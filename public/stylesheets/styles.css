@@ -19,8 +19,9 @@ p {
 h1 {
 	font-family: "GOST type A", Verdana, Geneva, sans-serif;
 	padding-bottom: 5px;
-	font-size: 23px;
+	font-size: 55px;
 	color: #333333;
+        text-decoration:  underline;
 }
 h2 {
 	color: #333333;
@@ -810,4 +811,55 @@ margin-bottom: 10px;
 }
 #sidebar_menu_text {
 	margin: 5px auto;
+}
+
+#slideshow #slidesContainer {
+  margin:0 auto;
+  width:964px;
+  height:899px;
+  overflow:auto; /* allow scrollbar */
+  position:relative;
+}
+
+#slideshow #slidesContainer .slide {
+  margin:0 auto;
+  width:944px; /* reduce by 20 pixels to avoid horizontal scroll */
+  height:899px;
+}
+#slideshow {
+    padding-bottom: 50px;
+}
+/**
+ * Slideshow controls style rules.
+ */
+.control {
+  display:block;
+  width:44px;
+  height:338px;
+  text-indent:-10000px;
+  position:absolute;
+  cursor: pointer;
+}
+#leftControl {
+  top:200px;
+  left:0;
+  background:transparent url(/images/control_left.png) no-repeat 0 0;
+  margin-left: 50px;
+}
+#rightControl {
+  top:200px;
+  right:0;
+  background:transparent url(/images/control_right.png) no-repeat 0 0;
+  margin-right: 50px;
+}
+
+.slide img {
+   
+}
+
+#title {
+    width: 500px;
+    position: relative;
+    left: 152px;
+    margin-bottom: 50px;
 }
