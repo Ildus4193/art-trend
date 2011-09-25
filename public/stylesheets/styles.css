@@ -488,7 +488,7 @@ li#contacts a:hover, li#contacts a:active{
 #content {
 	position: relative;	
 	margin: 0 auto;
-	top: 10px;
+	top: -10px;
 	width: 820px;
 	height: 100%;
 
@@ -646,10 +646,14 @@ margin-bottom: 10px;
     height: 230px;
 
 }
+
+.group_gallery img:hover {
+    background: url(/images/see_more.png) no-repeat;
+}
 .group_gallery p {
     font-family: "Myriad Pro", Verdana, Geneva, sans-serif;
-    font-size:18px;
-    color: #333333;
+    font-size:16px;
+    color: #999999;
 }
 
 #news {

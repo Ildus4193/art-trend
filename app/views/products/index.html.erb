@@ -1,4 +1,5 @@
 <%= render :partial => "page_products" %>
+<p style=" font: 19px 'GOST type A',Verdana,Geneva,sans-serif;  text-transform: uppercase; padding-bottom: 10px;">Портфолио <%= image_tag "pic.png", :style => "position: relative; top: 5px; left: -8px;" %> </p>
 <% if admin_signed_in? %>
   <%= link_to 'Новый продукт', new_product_path, :style => "color: #663366; font-family: 'Myriad Pro',Verdana,Geneva,sans-serif; font-size: 14px; text-decoration: underline;" %>
   <div style="clear: left; padding-bottom: 35px;"></div>

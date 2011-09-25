@@ -6,10 +6,10 @@
     <p><%= @product.title %></p>
   </div>
 </div>
-  </div>
-</div>
+<div style="clear: left; padding-bottom: 35px;"></div>
 <% if admin_signed_in? %>
 <%= link_to 'Редактировать', edit_product_path(@product) %> 
 <%= link_to 'Назад', products_path %>
-  
+  </div>
+</div>
 <% end %>

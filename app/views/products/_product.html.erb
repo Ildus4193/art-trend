@@ -2,15 +2,16 @@
 <div class="group_gallery" style=" height: 280px;">
 <div style="vertical-align: bottom;position:relative; height: 235px; ">
   <% if admin_signed_in? %>
-  <%= image_tag("ramka.png", :style => "position: absolute;") %>
-    <%= link_to (image_tag(product.avatar.url(:thumb), :style => "width: 226px; height: 197px; position: relative; top: 15px; left: 15px;")), product %>
+    <%= link_to (image_tag(product.avatar.url(:thumb), :style => "width: 233px; height: 207px; position: absolute; top: 12px; left: 14px;")), product %>
+    <%= link_to image_tag("ramka.png", :style => "position: relative;"), product %>
   <% else %>
-  <%= image_tag("ramka.png", :style => "position: absolute;") %>
-  <%= image_tag(product.avatar.url(:thumb), :style => "width: 226px; height: 197px; position: relative; top: 15px; left: 15px;") %>
+  <%= image_tag(product.avatar.url(:thumb), :class => "products_click", :style => "width: 233px; height: 207px; position: absolute; top: 12px; left: 14px;") %>
+  <%= image_tag("ramka.png", :style => "position: relative;") %>
+  
   <% end %>
 </div>
   <div style=" height: 45px; width: 250px; margin-left: 5px;"> 
-    <p><%= product.title %></p>
+    <p style="color: #333333;"><%= product.title %></p>
     <p>Создание сайта</p>
       <% if admin_signed_in? %>
         <%= link_to 'Удалить', product, 
