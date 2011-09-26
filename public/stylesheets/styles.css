@@ -829,6 +829,10 @@ margin-bottom: 10px;
 #slideshow {
     padding-bottom: 50px;
 }
+
+#slideshow div a {
+    font: 19px 'GOST type A',Verdana,Geneva,sans-serif;  text-transform: uppercase; padding-bottom: 10px; color: #6666FF;
+}
 /**
  * Slideshow controls style rules.
  */
@@ -862,4 +866,19 @@ margin-bottom: 10px;
     position: relative;
     left: 152px;
     margin-bottom: 50px;
+}
+
+#services {
+    left: 60px;
+    position: relative;
+    top: -105px;
+}
+
+#services p {
+    font: 20px 'GOST type A',Verdana,Geneva,sans-serif;  text-transform: uppercase; 
+    padding-top: 15px;   
+}
+
+#services img {
+    position: relative; left: -25px; top: 10px;
 }
