@@ -882,3 +882,14 @@ margin-bottom: 10px;
 #services img {
     position: relative; left: -25px; top: 10px;
 }
+
+#contacts {
+    left: 40px;
+    position: relative;
+    top: -108px;
+}
+
+#contacts p {
+    font: 20px 'GOST type A',Verdana,Geneva,sans-serif;  text-transform: uppercase; 
+    padding-top: 15px;   
+}

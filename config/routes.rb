@@ -8,6 +8,7 @@ ArtTrend::Application.routes.draw do
   
   match "portfolio" => "pages#portfolio", :as => 'portfolio'
   match "services" => "pages#services", :as => 'services'
+  match "contacts" => "pages#contacts", :as => 'contacts'
   root :to => "products#index"
   resources :products
   # The priority is based upon order of creation:
